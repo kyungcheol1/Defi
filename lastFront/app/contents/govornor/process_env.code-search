@@ -1,0 +1,151 @@
+# Query: process.env
+# ContextLines: 1
+
+75개 결과 - 18 파일
+
+lastFront/README.md:
+  74  const address = '0x0000000000000000000000000000000000000000'
+  75: const Ethtoken = ContractCA.NEXT_PUBLIC_ETHTOKEN_ADDRESS
+  76: const ASDtoken = ContractCA.NEXT_PUBLIC_ASDTOKEN_ADDRESS
+  77  
+
+lastFront/app/components/modal/aridropModal.tsx:
+  29    const { wallet } = useSelector<RootState, RootState>((state) => state)
+  30:   const LPToken = ContractCA.NEXT_PUBLIC_ETHLP_ADDRESS
+  31  
+
+lastFront/app/contents/modal/claimModal.tsx:
+  12  
+  13: const Arbadd = ContractCA.NEXT_PUBLIC_ARBTTOKEN_ADDRESS
+  14: const Usdtadd = ContractCA.NEXT_PUBLIC_USDTTOKEN_ADDRESS
+  15: const Ethadd = ContractCA.NEXT_PUBLIC_ETHTOKEN_ADDRESS
+  16: const Asdadd = ContractCA.NEXT_PUBLIC_ASDTOKEN_ADDRESS
+  17: const ArbLp = ContractCA.NEXT_PUBLIC_ARBLP_ADDRESS
+  18: const UsdtLp = ContractCA.NEXT_PUBLIC_USDTLP_ADDRESS
+  19: const EthLp = ContractCA.NEXT_PUBLIC_ETHLP_ADDRESS
+  20  
+
+lastFront/app/contents/modal/depositModal.tsx:
+  17  
+  18: const Arbadd = ContractCA.NEXT_PUBLIC_ARBTTOKEN_ADDRESS
+  19: const Usdtadd = ContractCA.NEXT_PUBLIC_USDTTOKEN_ADDRESS
+  20: const Ethadd = ContractCA.NEXT_PUBLIC_ETHTOKEN_ADDRESS
+  21: const Asdadd = ContractCA.NEXT_PUBLIC_ASDTOKEN_ADDRESS
+  22  
+
+lastFront/app/contents/modal/depositPairModal.tsx:
+  28  
+  29: const Arbadd = ContractCA.NEXT_PUBLIC_ARBTTOKEN_ADDRESS
+  30: const Usdtadd = ContractCA.NEXT_PUBLIC_USDTTOKEN_ADDRESS
+  31: const Ethadd = ContractCA.NEXT_PUBLIC_ETHTOKEN_ADDRESS
+  32: const Asdadd = ContractCA.NEXT_PUBLIC_ASDTOKEN_ADDRESS
+  33  
+
+lastFront/app/contents/modal/withDrawModal.tsx:
+  17  
+  18: const Arbadd = ContractCA.NEXT_PUBLIC_ARBTTOKEN_ADDRESS
+  19: const Usdtadd = ContractCA.NEXT_PUBLIC_USDTTOKEN_ADDRESS
+  20: const Ethadd = ContractCA.NEXT_PUBLIC_ETHTOKEN_ADDRESS
+  21: const Asdadd = ContractCA.NEXT_PUBLIC_ASDTOKEN_ADDRESS
+  22: const ArbLp = ContractCA.NEXT_PUBLIC_ARBLP_ADDRESS
+  23: const UsdtLp = ContractCA.NEXT_PUBLIC_USDTLP_ADDRESS
+  24: const EthLp = ContractCA.NEXT_PUBLIC_ETHLP_ADDRESS
+  25  
+
+lastFront/app/contents/modal/withDrawsinglModal.tsx:
+  18  
+  19: const Arbadd = ContractCA.NEXT_PUBLIC_ARBTTOKEN_ADDRESS
+  20: const Usdtadd = ContractCA.NEXT_PUBLIC_USDTTOKEN_ADDRESS
+  21: const Ethadd = ContractCA.NEXT_PUBLIC_ETHTOKEN_ADDRESS
+  22: const Asdadd = ContractCA.NEXT_PUBLIC_ASDTOKEN_ADDRESS
+  23: const ArbLp = ContractCA.NEXT_PUBLIC_ARBLP_ADDRESS
+  24: const UsdtLp = ContractCA.NEXT_PUBLIC_USDTLP_ADDRESS
+  25: const EthLp = ContractCA.NEXT_PUBLIC_ETHLP_ADDRESS
+  26  
+
+lastFront/app/drops/content/body.tsx:
+  34    useEffect(() => {
+  35:     const airdropCA = ContractCA.NEXT_PUBLIC_AIRDROP_ADDRESS
+  36      if (typeof provider.provider !== "string" && airdropCA) {
+
+lastFront/app/governance/agenda/page.tsx:
+  104        const signer = provider.provider.getSigner()
+  105:       const govCA = ContractCA.NEXT_PUBLIC_GOVERNOR_ADDRESS
+  106:       const factoryCA = ContractCA.NEXT_PUBLIC_FACTORY_ADDRESS
+  107:       const VASDCA = ContractCA.NEXT_PUBLIC_VASDTOKEN_ADDRESS
+  108        const govinstance = new ethers.Contract(govCA!, Governance.abi, provider.provider)
+
+lastFront/app/governance/agenda/[id]/page.tsx:
+  28  
+  29:   const owner = ContractCA.NEXT_PUBLIC_OWNER_ADDRESS
+  30  
+
+lastFront/app/governance/agenda/create/page.tsx:
+  12  const tokenCA = {
+  13:   ARB: ContractCA.NEXT_PUBLIC_ARBTTOKEN_ADDRESS,
+  14:   USDT: ContractCA.NEXT_PUBLIC_USDTTOKEN_ADDRESS,
+  15:   ASD: ContractCA.NEXT_PUBLIC_ASDTOKEN_ADDRESS,
+  16:   ETH: ContractCA.NEXT_PUBLIC_ETHTOKEN_ADDRESS,
+  17:   RETH: ContractCA.NEXT_PUBLIC_RETHTOKEN_ADDRESS,
+  18:   ARBLP: ContractCA.NEXT_PUBLIC_ARBLP_ADDRESS,
+  19:   USDTLP: ContractCA.NEXT_PUBLIC_USDTLP_ADDRESS,
+  20:   ETHLP: ContractCA.NEXT_PUBLIC_ETHLP_ADDRESS,
+  21  }
+
+lastFront/app/governance/agenda/create/content/HaveBox.tsx:
+  15    const setBalance = async () => {
+  16:     const ASD = ContractCA.NEXT_PUBLIC_ASDTOKEN_ADDRESS
+  17:     const vASD = ContractCA.NEXT_PUBLIC_VASDTOKEN_ADDRESS
+  18      const ASDBalance = await factory!.checkToken(ASD)
+
+lastFront/app/governance/staking/content/content.tsx:
+  13  
+  14: const Arbadd = ContractCA.NEXT_PUBLIC_ARBTTOKEN_ADDRESS
+  15: const Usdtadd = ContractCA.NEXT_PUBLIC_USDTTOKEN_ADDRESS
+  16: const Ethadd = ContractCA.NEXT_PUBLIC_ETHTOKEN_ADDRESS
+  17: const Asdadd = ContractCA.NEXT_PUBLIC_ASDTOKEN_ADDRESS
+  18: const ArbLp = ContractCA.NEXT_PUBLIC_ARBLP_ADDRESS
+  19: const UsdtLP = ContractCA.NEXT_PUBLIC_USDTLP_ADDRESS
+  20: const EthLP = ContractCA.NEXT_PUBLIC_ETHLP_ADDRESS
+  21  
+
+lastFront/app/governance/unstaking/content/content.tsx:
+  15  
+  16: const Arbadd = ContractCA.NEXT_PUBLIC_ARBTTOKEN_ADDRESS
+  17: const Usdtadd = ContractCA.NEXT_PUBLIC_USDTTOKEN_ADDRESS
+  18: const Ethadd = ContractCA.NEXT_PUBLIC_ETHTOKEN_ADDRESS
+  19: const Asdadd = ContractCA.NEXT_PUBLIC_ASDTOKEN_ADDRESS
+  20: const ArbLp = ContractCA.NEXT_PUBLIC_ARBLP_ADDRESS
+  21: const UsdtLP = ContractCA.NEXT_PUBLIC_USDTLP_ADDRESS
+  22: const EthLP = ContractCA.NEXT_PUBLIC_ETHLP_ADDRESS
+  23  
+
+lastFront/app/hooks/usefactory.jsx:
+  8    if (!provider) return
+  9:   const factoryCA = ContractCA.NEXT_PUBLIC_FACTORY_ADDRESS
+  10    const contract = new ethers.Contract(factoryCA, factoryABI.abi, provider)
+
+lastFront/app/swap/page.tsx:
+  19  const tokenCA = {
+  20:   ARB: ContractCA.NEXT_PUBLIC_ARBTTOKEN_ADDRESS,
+  21:   USDT: ContractCA.NEXT_PUBLIC_USDTTOKEN_ADDRESS,
+  22:   ASD: ContractCA.NEXT_PUBLIC_ASDTOKEN_ADDRESS,
+  23:   ETH: ContractCA.NEXT_PUBLIC_ETHTOKEN_ADDRESS,
+  24:   RETH: ContractCA.NEXT_PUBLIC_RETHTOKEN_ADDRESS,
+  25    ARBLP: "",
+
+lastFront/common/config/db.ts:
+   7      db = mysql.createConnection({
+   8:         user : ContractCA.DB_USER,
+   9:         password: ContractCA.DB_PASSWORD,
+  10:         host: ContractCA.DB_HOST,
+  11:         port: ContractCA.DB_PORT,
+  12:         database: ContractCA.DB
+  13  });
+
+lastsolidity/scripts/factory.ts:
+  4  
+  5: const deployAddress = ContractCA.DEPLOY_ADDRESS
+  6: const sdeployAddress = ContractCA.SDEPLOY_ADDRESS
+  7: const ethDeployAddress = ContractCA.ETHTOKEN_ADDRESS
+  8  async function main() {
